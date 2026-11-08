@@ -1,0 +1,29 @@
+﻿@model UniversityCafeteria5.Models.Supplier
+
+<h2>Add Supplier</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.phone)
+        @Html.TextBoxFor(model => model.phone, new { @class = "form-control" })
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
+<p>
+    @Html.ActionLink("Back to Suppliers", "Index")
+</p>

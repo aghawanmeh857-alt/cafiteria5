@@ -1,0 +1,29 @@
+﻿@model IEnumerable<UniversityCafeteria5.Models.Supplier>
+
+<h2>Suppliers</h2>
+
+<p>
+    @Html.ActionLink("Add New Supplier", "Create")
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var supplier in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(item => supplier.ID)</td>
+                <td>@Html.DisplayFor(item => supplier.Name)</td>
+                <td>@Html.DisplayFor(item => supplier.phone)</td>
+                <td>@Html.DisplayFor(item => supplier.Email)</td>
+            </tr>
+        }
+    </tbody>
+</table>

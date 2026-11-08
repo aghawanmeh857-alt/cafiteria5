@@ -1,0 +1,33 @@
+﻿@model IEnumerable<UniversityCafeteria5.Models.Product>
+
+<h2>Products</h2>
+
+<p>
+    @Html.ActionLink("Add New Product", "Create")
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Category Id</th>
+            <th>Supplier Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(item => product.ID)</td>
+                <td>@Html.DisplayFor(item => product.Name)</td>
+                <td>@Html.DisplayFor(item => product.Price)</td>
+                <td>@Html.DisplayFor(item => product.Quantity)</td>
+                <td>@Html.DisplayFor(item => product.CategoryID)</td>
+                <td>@Html.DisplayFor(item => product.SupplierID)</td>
+            </tr>
+        }
+    </tbody>
+</table>
